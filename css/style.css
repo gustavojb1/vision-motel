@@ -133,56 +133,128 @@ i {
 #suites {
   background-color: var(--first-color);
 }
-.carousel-item img {
-  height: 440px;
-  width: 100%;
-  object-fit: cover;
-}
+
 #suite-title {
   font-size: 40px;
+
 }
-#carousel {
-  width: 90%;
-}
-.detalhesimg {
-  width: 80%;
-  height: 200px;
-  background-color: white;
-  top: 320px;
-  left: 10%;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
-}
-.carousel-control-prev {
-  justify-content: flex-start;
-}
-.carousel-control-next {
-  justify-content: flex-end;
-}
-.detalhesimg > div {
-  color: var(--fourth-color);
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-}
-.carousel-inner {
-  overflow: visible;
+#desktop-slide ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
 }
 
-#icon-carousel {
-  color: black;
-  background-image: none;
-  font-size: 40px;
-  height: 100px;
-  width: 60px;
-  background-color: #ffffff;
+.slide img{
+  width: 950px;
 }
+
+.slide-wrapper{
+  overflow: hidden;
+  position: relative;
+  height: 700px;
+}
+
+#desktop-slide .slide{
+  display: flex;
+  align-items: center;
+  transition: all .5s;
+
+}
+
+#desktop-slide .slide li{
+  flex-shrink: 0;
+  max-width: 950px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+
+  
+}
+#desktop-slide .slide li img{
+object-fit: cover;
+max-height: 100%;
+}
+
+.detail-img{
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  margin-top: 420px;
+  position: absolute;
+  row-gap: 20px;
+  display: flex;
+  
+}
+
+#button-carosel{
+width: 950px;
+height: 500px;
+position: absolute;
+top: 0;
+left: 20%;
+align-self: center;
+justify-self: center;
+}
+
+
+#prev{
+position: absolute;
+background-color:rgba(255, 255, 255, .5);
+height: 70px;
+width: 40px;
+top: 235px;
+left: 0;
+border: none;
+color: black;
+font-size: 40px;
+}
+#next{
+position: absolute;
+background-color: rgba(255, 255, 255, .5);
+height: 70px;
+width: 40px;
+top: 235px;
+right: 0px;
+border: none;
+color: black;
+font-size: 40px;
+}
+
+
+
+@media (max-width: 963px) {
+#button-carosel {
+  width: 100%;
+}
+.slide img{
+  width: 100vw;
+  height: 500px;
+}
+
+
+}
+
+@media (max-width: 768px) {
+  .detail-img{
+    width: 280px;
+    flex-direction: column;
+  }
+  
+  }
+  
+
+
+
+
+
+
 #ver-todas {
   text-decoration: underline;
   color: #ffffff;
 }
 #container-ver-todas {
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
   padding-bottom: 80px;
 }
 
@@ -403,3 +475,8 @@ footer {
     height: 40px;
   }
 }
+
+
+
+
+
