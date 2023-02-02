@@ -28,6 +28,10 @@ i {
   color: black;
 }
 
+.container-fluid {
+  overflow: hidden;
+}
+
 /* FONTES */
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
@@ -76,7 +80,7 @@ i {
 /* animações */
 [anime-from] {
   opacity: 0;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 [anime-from="left"] {
@@ -88,13 +92,27 @@ i {
 [anime-from="top"] {
   transform: translate3d(0, -50px, 0);
 }
-[anime-from="grow"] {
-  font-size: 0px;
-}
 
 [anime-from].animate {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
+}
+
+@keyframes grow-desktop {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 80px;
+  }
+}
+@keyframes grow-mobile {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 50px;
+  }
 }
 
 /* inicio */
@@ -109,7 +127,10 @@ i {
   text-align: center;
 }
 #vision-title {
+  height: 80px;
   font-size: 50px;
+  animation: grow-mobile 0.8s;
+  animation-fill-mode: forwards;
 }
 #inicio .d-flex {
   column-gap: 10px;
@@ -135,19 +156,17 @@ i {
 .nav-item {
   text-align: center;
 }
-#bem-vindo {
-  font-size: 18px;
-}
 
 @media (min-width: 768px) {
   #inicio {
     height: 100vh;
-  }
-  #bem-vindo {
     font-size: 30px;
   }
   #vision-title {
     font-size: 80px;
+    height: 110px;
+    animation: grow-desktop 0.8s;
+    animation-fill-mode: forwards;
   }
   #btn-principal {
     background-color: #ffffff;
