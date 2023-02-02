@@ -37,7 +37,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <!-- PRIMEIRA DIV -->
+      <!-- PRIMEIRA SECTION(PRINCIPAL) -->
 
       <main id="inicio" class="row">
         <div
@@ -48,16 +48,18 @@
             id="main-details"
             class="montserrat-medium row justify-content-center fs-4"
           >
-            Bem vindo ao <span class="playfair"> Vision motel</span>
+            <span id="bem-vindo" anime-from="grow">Bem vindo ao </span><span id="vision-title" class="playfair" anime-from="grow"> Vision motel</span>
             <div class="d-flex justify-content-center mt-4">
-              <a class="my-btn-primary py-3 px-5"> Ver suites </a>
-              <a class="my-btn-secondary py-3 px-5"> Reservas </a>
+              <button class="my-btn-primary py-3 px-5">Ver suites</button>
+              <button class="my-btn-secondary py-3 px-5">Reservas</button>
             </div>
           </div>
         </div>
-
+        <!-- NAVBAR -->
         <nav
-          class="navbar px-3 px-md-4 navbar-expand-md navbar-dark bg-transparent position-absolute order-md-1 z-3"
+          id="nav"
+          class="navbar px-3 px-md-4 navbar-expand-md navbar-dark bg-transparent position-absolute order-md-1 z-3 sticky-top"
+          anime-from="top"
         >
           <div class="container-fluid">
             <a class="navbar-brand d-flex" href="#">
@@ -99,19 +101,19 @@
                   <a class="nav-link active" href="#localizacao">Localização</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#contato">Contato</a>
+                  <a class="nav-link active" href="#footer">Contato</a>
                 </li>
               </ul>
             </div>
-            <a id="btn-principal" class="my-btn-primary py-2 px-4 order-2">
+            <button id="btn-principal" class="my-btn-primary py-2 px-4 order-2">
               Reservas
-            </a>
+            </button>
           </div>
         </nav>
       </main>
 
-      <!-- suites SEGUNDA DIV -->
-      <div id="suites" class="row justify-content-center align-items-center">
+      <!-- SEGUNDA SECTION - SUITES -->
+      <section id="suites" class="row justify-content-center align-items-center">
         <div
           class="d-flex justify-content-center align-items-center flex-wrap pt-5"
         >
@@ -121,59 +123,90 @@
 
           <div id="desktop-slide" class="slide-wrapper">
             <ul class="slide">
-                <li>
-                  <img src="./img/image 1.png" alt="">
-                  <div class="detail-img  align-items-center justify-content-center ">
-                    <div >
-                      <div class="black playfair text-center fs-1 mb-3 ">Suíte Cristal</div>
-                      <div class="black montserrat-regular text-center fs-4 mb-4 mb-md-0">A partir de R$ 164,00</div>
+              <li>
+                <img src="./img/image 1.png" alt="" />
+                <div
+                  class="detail-img align-items-center justify-content-center"
+                >
+                  <div>
+                    <div class="black playfair text-center fs-1 mb-3">
+                      Suíte Cristal
                     </div>
-                    <div><a class="my-btn-secondary py-3 px-5 ms-md-5"> Saiba Mais </a></div>
-                  </div>
-                </li>
-                <li>
-                  <img src="./img/image 1.png" alt="">
-                  <div class="detail-img  align-items-center justify-content-center ">
-                    <div >
-                      <div class="black playfair text-center fs-1 mb-3 ">Suíte Cristal</div>
-                      <div class="black montserrat-regular text-center fs-4 mb-4 mb-md-0">A partir de R$ 164,00</div>
+                    <div
+                      class="black montserrat-regular text-center fs-4 mb-4 mb-md-0"
+                    >
+                      A partir de R$ 164,00
                     </div>
-                    <div><a class="my-btn-secondary py-3 px-5 ms-md-5"> Saiba Mais </a></div>
                   </div>
-                </li>
-                <li>
-                  <img src="./img/image 1.png" alt="">
-                  <div class="detail-img  align-items-center justify-content-center ">
-                    <div >
-                      <div class="black playfair text-center fs-1 mb-3 ">Suíte Cristal</div>
-                      <div class="black montserrat-regular text-center fs-4 mb-4 mb-md-0">A partir de R$ 164,00</div>
+                  <div>
+                    <button class="my-btn-secondary py-3 px-5 ms-md-5">
+                      Saiba Mais
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="./img/image 1.png" alt="" />
+                <div
+                  class="detail-img align-items-center justify-content-center"
+                >
+                  <div>
+                    <div class="black playfair text-center fs-1 mb-3">
+                      Suíte Cristal
                     </div>
-                    <div><a class="my-btn-secondary py-3 px-5 ms-md-5"> Saiba Mais </a></div>
+                    <div
+                      class="black montserrat-regular text-center fs-4 mb-4 mb-md-0"
+                    >
+                      A partir de R$ 164,00
+                    </div>
                   </div>
-                </li>
+                  <div>
+                    <button class="my-btn-secondary py-3 px-5 ms-md-5">
+                      Saiba Mais
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="./img/image 1.png" alt="" />
+                <div
+                  class="detail-img align-items-center justify-content-center"
+                >
+                  <div>
+                    <div class="black playfair text-center fs-1 mb-3">
+                      Suíte Cristal
+                    </div>
+                    <div
+                      class="black montserrat-regular text-center fs-4 mb-4 mb-md-0"
+                    >
+                      A partir de R$ 164,00
+                    </div>
+                  </div>
+                  <div>
+                    <button class="my-btn-secondary py-3 px-5 ms-md-5">
+                      Saiba Mais
+                    </button>
+                  </div>
+                </div>
+              </li>
             </ul>
             <div id="button-carosel">
-              <button id="prev" class="bi bi-chevron-left"> </button>
-              <button id="next" class="bi bi-chevron-right"> </button>
+              <button id="prev" class="bi bi-chevron-left"></button>
+              <button id="next" class="bi bi-chevron-right"></button>
             </div>
-              
-            
-        </div>
-
-        
-
+          </div>
 
           <!-- FIM DO CARROSEL -->
           <div id="container-ver-todas" class="d-flex justify-content-center">
             <a id="ver-todas" class="montserrat-medium">Ver Todas as Suites</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- TERCEIRA DIV -->
-      <div id="motel" class="row justify-content-center">
-        <div id="motel-img" class="order-md-2"></div>
-        <div id="motel-details" class="order-md-1">
+      <!-- TERCEIRA SECTION - MOTEL -->
+      <section id="motel" class="row justify-content-center">
+        <div id="motel-img" class="order-md-2" anime-from="right"></div>
+        <div id="motel-details" class="order-md-1" anime-from="left">
           <div id="motel-title" class="black playfair">O Motel</div>
           <p class="black montserrat-regular">
             O Vison Motel está localizado na Zona Industrial Norte, em Joinville
@@ -190,57 +223,61 @@
             Hospede-se e aproveite ainda nosso delicioso café da manhã, servido
             todos os dias para pernoites!
           </p>
-          <a class="my-btn-secondary py-3 px-5"> Saiba Mais </a>
+          <button class="my-btn-secondary py-3 px-5">Saiba Mais</button>
         </div>
-      </div>
+      </section>
 
-      <!-- QUARTA DIV -->
-      <div id="cortesia" class="row justify-content-center">
+      <!-- QUARTA SECTION - CORTESIAS  -->
+      <section id="cortesia" class="row justify-content-center">
         <span class="playfair text-center">Cortesias</span>
 
         <!-- CARDS -->
-        <div class="card">
+        <div class="card" anime-from="left">
           <img src="./img/img 1.png" class="card-img-top" alt="..." />
-          <div class="card-body text-center">
-            <span class="black playfair fs-1">Café da Manhã</span>
-            <p class="card-text black montserrat-regular pt-2 mt-1">
+          <div
+            class="card-body text-center"
+          >
+            <div id="card-title" class="black playfair fs-2">Café da Manhã</div>
+            <div class="card-text black montserrat-regular text-center">
               Servido todos os dias entre 6h e 10h, somente para o pernoite.
-            </p>
+            </div>
           </div>
         </div>
-
-        <div class="card">
+        <div class="card" anime-from="right">
           <img src="./img/img 2.png" class="card-img-top" alt="..." />
-          <div class="card-body text-center">
-            <span class="black playfair fs-1"
-              >Especial para Aniversariantes</span
-            >
-            <p class="card-text black montserrat-regular pt-2 mt-1">
-              A equipe do Vison Motel quer tornar o seu aniversário ainda mais
-              especial!
-            </p>
+          <div
+            class="card-body text-center"
+          >
+            <div id="card-title" class="black playfair fs-2">Especial para Aniversariantes</div>
+            <div class="card-text black montserrat-regular text-center">
+              A equipe do Vison Motel quer tornar o seu aniversário ainda mais especial!
+            </div>
           </div>
         </div>
-
-        <div class="card">
+        <div class="card" anime-from="left" >
           <img src="./img/img 3.png" class="card-img-top" alt="..." />
-          <div class="card-body text-center">
-            <span class="black playfair fs-1">Descontos</span>
-            <p class="card-text black montserrat-regular pt-2 mt-1">
+          <div
+            class="card-body text-center"
+          >
+            <div id="card-title" class="black playfair fs-2">Descontos</div>
+            <div class="card-text black montserrat-regular text-center">
               Economize se hospedando com desconto no Motel Vison!
-            </p>
+            </div>
           </div>
         </div>
-        <div id="cortesia-button-container" class="text-center">
-          <a id="cortesia-button" class="my-btn-secondary py-3 px-5">
-            Ver todas as cortesias
-          </a>
-        </div>
-      </div>
 
-      <!-- QUINTA DIV -->
-      <div id="localizacao" class="row justify-content-center">
-        <div class="card">
+
+        
+        <div id="cortesia-button-container" class="text-center">
+          <button id="cortesia-button" class="my-btn-secondary py-3 px-5">
+            Ver todas as cortesias
+          </button>
+        </div>
+      </section>
+
+      <!-- QUINTA SECTION - LOCALIZAÇÃO -->
+      <div id="localizacao" class="row justify-content-center" >
+        <div class="card" anime-from="right">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.7714264796323!2d-48.825242200000005!3d-26.2366155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deae58cfe71ce9%3A0xfb3e6a8cedd328d4!2sAv.%20Santos%20Dumont%2C%205253%20-%20Distrito%20Industrial%2C%20Joinville%20-%20SC%2C%2089219-730!5e0!3m2!1spt-BR!2sbr!4v1675019944264!5m2!1spt-BR!2sbr"
             class="card-img-top"
@@ -255,12 +292,12 @@
             <p class="card-text black montserrat-regular pt-2 mt-1 mb-4">
               Avenida Santos Dumont, 5253 Zona Industrial Norte - Joinville - SC
             </p>
-            <a class="my-btn-secondary py-3 px-5"> Traçar Rota </a>
+            <button class="my-btn-secondary py-3 px-5 mt-3 mb-4">Traçar Rota</button>
           </div>
         </div>
       </div>
 
-      <!-- SEXTA DIV -->
+      <!-- SEXTA SECTION - CONTATO -->
       <div id="contato" class="row justify-content-center d-md-none">
         <div id="contato-logo" class="text-center">
           <img src="./img/Motel.png" />
@@ -299,17 +336,17 @@
           </div>
           <div>
             <span class="contato-size">Whatsapp:</span>
-            <span>(061)3552-2297</span>
+            <span class="mb-4">(061)3552-2297</span>
             <span class="contato-size">Email:</span>
             <span>contato@motelvison.com</span>
           </div>
         </div>
       </div>
-      <footer class="row justify-content-center">
+      <footer id="footer" class="row justify-content-center">
         guia de motéis sites │ guia de motéis ©
       </footer>
     </div>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script/script.js"></script>
   </body>
 </html>
