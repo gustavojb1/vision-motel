@@ -1,3 +1,4 @@
+// NAVBAR BACKGROUND E POSITION
 window.addEventListener("resize", function () {
   if (window.innerWidth < 768) {
     if (
@@ -24,16 +25,53 @@ if (window.matchMedia("(max-width: 768px)").matches) {
   }
 }
 
+//DEBOUNCE PARA NÃO ADICIONAR A FUNÇÃO MUITAS VEZES DURANTE O SCROLL (MELHORA A PERFORMACE)
+const debounce = function(callback, delay) {
+  let timer;
+  return (...args) => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      callback(...args);
+      timer = null;
+    }, delay);
+  };
+}
+
+
+// ANIMAÇÕES
+const target = document.querySelectorAll("[anime-from]");
+const animationClass = "animate";
+
+function animeScroll() {
+  const windowTop = window.scrollY + ((window.innerHeight * 4) / 4);
+  target.forEach(function (element) {
+    if (windowTop > element.offsetTop) {
+      element.classList.add(animationClass)
+    }else{
+      element.classList.remove(animationClass)
+    }
+  });
+}
+
+animeScroll();
+
+window.addEventListener("scroll", debounce( function () {
+  animeScroll();
+  console.log('teste')
+}, 100));
+
+
+// CARROUSSEL
 const slide = document.querySelector(".slide");
 const wrapper = document.querySelector(".slide-wrapper");
 const slideArray = document.querySelectorAll(".slide li");
-const dist = { finalPosition: 0, startX: 0, movement: 0 };
+const dist = {};
 
 document.querySelector("#next").addEventListener("click", onNext);
 document.querySelector("#prev").addEventListener("click", onPrev);
 
 let slideArrayPosition = [];
-let contador = 0;
+let contador = 1;
 
 function moveSlide(distX) {
   dist.movePosition = distX;
@@ -64,7 +102,7 @@ function updateSlideStyles(index) {
   for (let i = 0; i < slideArray.length; i++) {
     if (i !== index) {
       const divDetail = slideArray[i].children[1];
-      divDetail.style.display = "none";
+      divDetail.style.opacity = 0;
 
       const slide = slideArray[i];
       slide.style.height = "350px";
@@ -76,7 +114,7 @@ function updateSlideStyles(index) {
       }
     } else {
       const divDetail = slideArray[i].children[1];
-      divDetail.style.display = "flex";
+      divDetail.style.opacity = 1;
     }
   }
 
